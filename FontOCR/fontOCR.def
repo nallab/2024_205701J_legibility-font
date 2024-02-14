@@ -1,0 +1,6 @@
+BootStrap: localimage
+
+From: /home/student/e20/e205701/study/gen_font/pytorch_latest.sif
+
+%post
+    pip install pandas
