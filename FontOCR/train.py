@@ -15,7 +15,7 @@ def train(epoch, model, dataloader, device, optimizer, criterion, train_loss, tr
   train_total_loss = 0
   train_total_acc = 0
 
-  for batch_idx, (data, label, _, _) in enumerate(dataloader):
+  for data, label, _, _ in dataloader:
     data, label = data.to(device), label.to(device)
     optimizer.zero_grad()
     output = model(data)

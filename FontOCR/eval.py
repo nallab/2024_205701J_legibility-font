@@ -2,7 +2,6 @@ from dataloader import chars
 import os
 from torchvision.models import resnet18, ResNet18_Weights
 import torch.nn as nn
-import torch.optim as optim
 import torch
 import datetime
 from dataloader import get_loader

@@ -1,7 +1,6 @@
 import string
 import os
 import random
-import torch
 import torchvision.transforms as T
 from torchvision import transforms
 from PIL import Image, ImageOps

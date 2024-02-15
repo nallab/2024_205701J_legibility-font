@@ -2,9 +2,8 @@ from torchvision.models import resnet18
 import torch.nn as nn
 import torch
 import string
-import torchvision
 import torchvision.transforms as T
-from PIL import Image, ImageOps
+from PIL import ImageOps
 
 only_lower = True
 if (only_lower):
