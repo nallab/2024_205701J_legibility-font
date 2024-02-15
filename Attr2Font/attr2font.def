@@ -1,0 +1,6 @@
+1 BootStrap: localimage
+  2
+  3 From: pytorch_latest.sifへのパス
+  4
+  5 %post
+  6     pip install pandas
