@@ -78,7 +78,7 @@ python main.py --phase test --dataset_root data/large_scale_tag --image_dir_name
 ### AttrFont-ENG の画像を入力して softmax の値を出力
 
 ```sh
-python main.py --phase forward --dataset_root data/attr2font --image_dir_name images/explor_all/image --is_attr2font_dataset True --load_weight_path 'FontOCRモデルの重みファイル（.pth）' --max_fonts_num -1 --output_loss_csv_dir '出力先のパス'
+python main.py --phase forward --dataset_root data/attr2font --image_dir_name images/explor_all/image --is_attr2font_dataset --load_weight_path 'FontOCRモデルの重みファイル（.pth）' --max_fonts_num -1 --output_loss_csv_dir '出力先のパス'
 ```
 
 ## Attr2Font
@@ -121,8 +121,9 @@ experiment_name='評価するモデルの出力用ディレクトリのパス'
 test_output_name='評価データの出力先'
 n_epoch='評価するモデルのepoch数'
 attributes_file='属性値ファイルのパス'
-test_num=1000
 style_char_file='source styles選択用ファイルのパス' # Noneを設定すると先行研究と同じくランダムに選択
+load_weight_path='評価にしようするFontOCRの重みファイル（.pth）'
+test_num=1000
 
 python test_legibility.py \
        --n_epoch ${n_epoch} \
@@ -130,9 +131,9 @@ python test_legibility.py \
        --test_output_name ${test_output_name}\
        --attributes_file ${attributes_file} \
        --style_char_file ${style_char_file} \
-       --load_weight_path ../FontOCR/checkpoint/20240114_183926/7.pth \
+       --load_weight_path ${load_weight_path} \
        --test_num ${test_num} \
-       --fix_index 25532
+       --fix_index 25532 # 入力するベースフォントの番号
 ```
 
 ## NoteBooks

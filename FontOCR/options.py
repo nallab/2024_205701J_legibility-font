@@ -16,7 +16,7 @@ def get_parser():
     parser.add_argument("--val_font_names_file_name", type=str, default="val_font_names.txt")
     parser.add_argument("--forward_font_names_file_name", type=str, default="fontname.txt")
     parser.add_argument("--ignore_fonts_file_name", type=str, default="eliminate_fonts.txt")
-    parser.add_argument("--is_attr2font_dataset", type=bool, default=False)
+    parser.add_argument('--is_attr2font_dataset', action='store_true')
     parser.add_argument("--batch_size", type=int, default=64, help="batch size")
     parser.add_argument("--num_workers", type=int, default=8)
     parser.add_argument("--output_loss_csv_path", type=str, default="loss_each_fonts.csv")
